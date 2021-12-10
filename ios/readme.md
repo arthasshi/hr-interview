@@ -1,7 +1,7 @@
 # HouseSigma 前端开发面试问卷。
 
-- 对问题有不确定的地方及时发邮件 reed@housesigma.com，cc：yuerengui@housesigma.com
-- 答案发回 reed@housesigma.com，cc：yuerengui@housesigma.com
+- 对问题有不确定的地方及时发邮件 reed（at）housesigma.com，cc：yuerengui（at）housesigma.com
+- 答案发回 reed（at）housesigma.com，cc：yuerengui（at）housesigma.com
 
 ---
 ### 工作时间安排
