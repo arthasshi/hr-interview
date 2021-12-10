@@ -2,11 +2,11 @@
 - 在3天内尽量完成，如果时间安排有冲突，请告知完成时间
 - 可以上网查资料，问问题，问人，但必须自己动手完成
 - 测试题比实际项目代码容易很多
-- 对问题有不确定的地方及时发邮件 yuerengui@housesigma.com，reed@housesigma.com，或者微信 13062529080
+- 对问题有不确定的地方及时发邮件 yuerengui（at）housesigma.com，tanwei（at）housesigma.com，reed（at）housesigma.com
 - 答案请发回： 
 ```
-To: yuerengui@housesigma.com
-cc: reed@housesigma.com
+To: reed（at）housesigma.com
+cc: yuerengui（at）housesigma.com, tanwei（at）housesigma.com
 Subject: PHP开发面试问卷回复 （姓名，城市）
 ```
 
