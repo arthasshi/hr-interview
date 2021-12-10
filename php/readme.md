@@ -150,4 +150,4 @@ curl --location --request GET 'es-sg-25u20g41h0002kbs7.public.elasticsearch.aliy
 ![snapshot_1611203014188zuvrav.png](https://image.tracup.com/snapshot_1611203014188zuvrav.png)
 
 #### 答案格式
-- 简单介绍解决思路, 如果使用到某些工具也请一并列出
+- 介绍解决思路, 如果使用到某些工具也请一并列出
