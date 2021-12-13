@@ -60,7 +60,7 @@ sample_output.json
 #### 答案格式
 - 简单介绍解决方法
 - 完整代码打包
-- sample_output.json 结果打包，如果数据太大，使用网盘分享的方式贴上分享链接, 建议使用 google drive，因为 Reed 在国外，下载国内网盘不易。
+- sample_output.json 结果打包，如果数据太大，使用网盘分享的方式贴上分享链接。
 
 ---
 
