@@ -1,5 +1,5 @@
 ### 房智汇 PHP 开发工程师面试问卷：
-- 在3天内尽量完成，如果时间安排有冲突，请告知完成时间
+- 在5天内尽量完成，如果时间安排有冲突，请告知完成时间
 - 可以上网查资料，问问题，问人，但必须自己动手完成
 - 测试题比实际项目代码容易很多
 - 对问题有不确定的地方及时发邮件 yuerengui（at）housesigma.com，tanwei（at）housesigma.com，reed（at）housesigma.com
@@ -11,60 +11,8 @@ Subject: PHP开发面试问卷回复 （姓名，城市）
 ```
 
 ---
-### 1. PHP，mySQL
-- 可以使用任意MVC框架编写. 例如：phalcon, ci, kohana, laravel, slim, silex...
-- 使用PDO连接数据库
-- 正确使用PHP，MYSQL内置的json function
 
-#### 任务1.1：导入数据到 Mysql 并转换数据后导出
-- 下载：[sample.json](https://drive.google.com/file/d/1hXSxrxc342WtqPRAuzpLpTmi-wKprb_J/view?usp=sharing)
-- 准备一台 mysql 服务器（8.0+版本或者差不多的mariadb，perconadb），创建一个 `sample` 表，添加 `string`, `string_json` 字段
-```
-CREATE TABLE `sample` (
-	`id` INT(11) NOT NULL AUTO_INCREMENT,
-	`string` TEXT NULL,
-	`string_json` JSON NULL DEFAULT NULL,
-	PRIMARY KEY (`id`)
-)
-```
-- 将 sample.json 导入到 sample 表, `string` 字段中,
-- 把 ` string` 字段里面用`^` 断字的文字转换为json格式，`^Food^^Health^^Arts^^Education^` ==> `["Food","Health","Arts","Education"]`
-整张表每一行都要转换
-- 转换结果写入到 'sample.string_json` 字段
-- 转换成功后将 sample 表导出为 sample_output.json
-- 问题：怎样用PHP长时间运行后台程序？
-- 问题：处理大量数据记录时防止内存溢出
-
-转换示例：
-```
-// 输入数据源
-sample.json
-[{"string": "^Food^^Health^^Arts^^Education^"}...]
-
-// 导入到 sample 表
-
-// 转换结果写入到 'sample.string_json` 字段
-
-// 导出 sample 表
-sample_output.json
-[{"string": "^Food^^Health^^Arts^^Education^", "string_json": ["Food","Health","Arts","Education"]}...]
-```
-
-#### 任务1.2：在刚才创建的数据库上，写一条mySQL查询语句
-- 参考 mySQL json function 
-    - https://dev.mysql.com/doc/refman/8.0/en/json-search-functions.html
-- 找出`sample` 表所有符合条件的：
-  - `string_json` 数组包含>=3个元素
-  - AND `string_json` 里面，文字`directional` 排在数组第三个
-
-#### 答案格式
-- 简单介绍解决方法
-- 完整代码打包
-- sample_output.json 结果打包，如果数据太大，使用网盘分享的方式贴上分享链接。
-
----
-
-### 2. 搭建开发环境 Linux + NGINX + PHP
+### 1. 搭建开发环境 Linux + NGINX + PHP
 > 公司服务器统一使用的是centos8 + PHP7 + phalcon3，个人开发环境需要和服务器一致。
 开发人员windows/osx电脑安装虚拟机运行linux
 
@@ -105,6 +53,60 @@ systemctl restart php-fpm
 - 虚拟机命令行结果
   - 切换到git项目目录，运行`git branch -a`
 - 浏览器输出结果保存为文件
+
+
+---
+### 2. PHP，mySQL
+- 可以使用任意MVC框架编写. 例如：phalcon, ci, kohana, laravel, slim, silex...
+- 使用PDO连接数据库
+- 正确使用PHP，MYSQL内置的json function
+
+#### 任务2.1：导入数据到 Mysql 并转换数据后导出
+- 下载：[sample.json](https://drive.google.com/file/d/1hXSxrxc342WtqPRAuzpLpTmi-wKprb_J/view?usp=sharing)
+- 准备一台 mysql 服务器（8.0+版本或者差不多的mariadb，perconadb），创建一个 `sample` 表，添加 `string`, `string_json` 字段
+```
+CREATE TABLE `sample` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`string` TEXT NULL,
+	`string_json` JSON NULL DEFAULT NULL,
+	PRIMARY KEY (`id`)
+)
+```
+- 将 sample.json 导入到 sample 表, `string` 字段中,
+- 把 ` string` 字段里面用`^` 断字的文字转换为json格式，`^Food^^Health^^Arts^^Education^` ==> `["Food","Health","Arts","Education"]`
+整张表每一行都要转换
+- 转换结果写入到 'sample.string_json` 字段
+- 转换成功后将 sample 表导出为 sample_output.json
+- 问题：怎样用PHP长时间运行后台程序？
+- 问题：处理大量数据记录时防止内存溢出
+
+转换示例：
+```
+// 输入数据源
+sample.json
+[{"string": "^Food^^Health^^Arts^^Education^"}...]
+
+// 导入到 sample 表
+
+// 转换结果写入到 'sample.string_json` 字段
+
+// 导出 sample 表
+sample_output.json
+[{"string": "^Food^^Health^^Arts^^Education^", "string_json": ["Food","Health","Arts","Education"]}...]
+```
+
+#### 任务2.2：在刚才创建的数据库上，写一条mySQL查询语句
+- 参考 mySQL json function 
+    - https://dev.mysql.com/doc/refman/8.0/en/json-search-functions.html
+- 找出`sample` 表所有符合条件的：
+  - `string_json` 数组包含>=3个元素
+  - AND `string_json` 里面，文字`directional` 排在数组第三个
+
+#### 答案格式
+- 简单介绍解决方法
+- 完整代码打包
+- sample_output.json 结果打包，如果数据太大，使用网盘分享的方式贴上分享链接。
+
 
 ---
 ### 3. 写一条 ElasticSearch 查询语句
