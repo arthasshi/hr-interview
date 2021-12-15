@@ -110,9 +110,9 @@ sample_output.json
 
 ---
 ### 3. 写一条 ElasticSearch 查询语句
-ES 服务器：es-sg-25u20g41h0002kbs7.public.elasticsearch.aliyuncs.com:9200
-用户：interview  密码：n=H#b#e373
-index：listing_map
+- ES 服务器：https://interview-test.es.asia-northeast1.gcp.cloud.es.io:9243
+- 用户：interview  密码：n=H#b#e373
+- index：listing_map
 ```
 # 测试连接
 curl --location --request GET 'es-sg-25u20g41h0002kbs7.public.elasticsearch.aliyuncs.com:9200/listing_map' --header 'Authorization: Basic aW50ZXJ2aWV3Om49SCNiI2UzNzM='
