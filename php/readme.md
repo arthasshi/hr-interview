@@ -115,7 +115,7 @@ sample_output.json
 - index：listing_map
 ```
 # 测试连接
-curl --location --request GET 'es-sg-25u20g41h0002kbs7.public.elasticsearch.aliyuncs.com:9200/listing_map' --header 'Authorization: Basic aW50ZXJ2aWV3Om49SCNiI2UzNzM='
+curl --location --request GET 'https://interview-test.es.asia-northeast1.gcp.cloud.es.io:9243/listing_map' --header 'Authorization: Basic aW50ZXJ2aWV3Om49SCNiI2UzNzM='
 ```
 
 - 问题 1 : 请查询 `(status.live === 1 && type_own_srch === 'D.') || ( status.sold === 1 && type_own_srch === 'V.')`  的其中 100 条结果
