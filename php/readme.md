@@ -142,7 +142,7 @@ sample_output.json
 [{"string": "^Food^^Health^^Arts^^Education^", "string_json": ["Food","Health","Arts","Education"]}...]
 ```
 
-#### 任务2.2：在刚才创建的数据库上，写一条mySQL查询语句
+#### 任务2.2：在刚才创建的数据库上，写2条mySQL查询语句
 - 参考 mySQL json function 
     - https://dev.mysql.com/doc/refman/8.0/en/json-search-functions.html
 - 找出`sample` 表所有符合条件的：
