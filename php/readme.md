@@ -70,7 +70,7 @@ Android APK：https://housesigma.com/static/housesigma-2.13.0-prd.apk
     - PHP7.3
     - PHP-PHALCON
 1. 用git导出项目
-    - https://github.com/housesigma/php-interview  (git@github.com:housesigma/php-interview.git)
+    - https://github.com/housesigma/hr-interview  (git@github.com:housesigma/hr-interview.git)
 1. 用NGINX架设本地测试网站 `localhost` 
 2. 浏览器在本地环境运行git项目
 
